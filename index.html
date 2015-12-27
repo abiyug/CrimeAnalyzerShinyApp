@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Crime Analyzer Shiny Web Application</title>
+  <meta name="description" content="">
+  <meta name="author" content="Abiyu Giday">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h3>Crime Analyzer Shiny Web Application</h3>
+  <div style='text-align: center;'>
+    <img height='320' src='HustonCrime.png' />
+</div>
+
+<h4>Abiyu Giday</h4>
+
+<h5>December 24, 2015</h5>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h3>What is Crime Analyzer Shiny Web App?</h3>
+  <ul>
+<li>Crime Analyzer web application provides graphically detailed insight for crime analysis in a large metropolitan area. </li>
+<li>The application comes loaded with Huston Police crime dataset from January 2010 to August 2010, but datasets from other metropolitan areas can be loaded. </li>
+<li>The application loads violent crime by type, by month or by  a combination of both. </li>
+<li>Each crime type is depicted with different color pallet. </li>
+<li>The crime location is geocoded and is displayed on a map in the exact spot where the crime took place.</li>
+</ul>
+
+<p>Refrence<a href="http://www.houstontx.gov/police/cs/stats2.htm">http://www.houstontx.gov/police/cs/stats2.htm</a></p>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h3>Graphic User Interface of the application</h3>
+  <div style='text-align: center;'>
+    <img height='660' src='appFeatures.png' />
+</div>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h3>Crime Web App Features:</h3>
+  <ul>
+<li><strong>Clustering</strong> feature allows to combine and view crime from a bird’s eye view.<br></li>
+<li>When <strong>hovering over and clicking on each crime dot</strong> , a pop up will show the <em>type of offense, date and time of the crime</em>.</li>
+<li>The App has a <strong>floating panel</strong> with two drop down filter menus and a clustering click box.</li>
+<li>The user can select on the <strong>drop-down menu</strong> for type of offense and/or Month the crime took place.</li>
+<li>User can <strong>drag the floating panel</strong> by clicking and holding the mouse on anywhere on the panel.</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h3>App Documentation</h3>
+  <ul>
+<li>The app documentation tab includes the help and <em>how-to</em> use the app information. </li>
+<li>The code for the application is located on Github <a href="https://github.com/abiyug/CrimeAnalyzerShinyApp">https://github.com/abiyug/CrimeAnalyzerShinyApp</a></li>
+</ul>
+
+<div style='text-align: center;'>
+    <img height='360' src='AppDocumentation.png' />
+</div>
+
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h3>R Packages used to develop the application</h3>
+  <ul>
+<li>Shiny package</li>
+<li>Leaflet package</li>
+<li>ggmap package</li>
+<li>ggplot2 package</li>
+<li>dplyr package</li>
+</ul>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script src='libraries/highlighters/prettify/js/lang-r.js'></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- End Google Prettify --> 
+
+</html>
