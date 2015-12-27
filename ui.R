@@ -83,7 +83,9 @@ shinyUI(
                                          ),
                                          tabPanel("GitHub Source Code Location"),
                                          h3("Source Code URLs"),
-                                         p("https://github.com/abiyug/HustonCrimeApp")
+                                         p("https://github.com/abiyug/CrimeAnalyzerShinyApp"),
+                                         h3("Presenation for the app is published on rpubs."),
+                                         p("http://rpubs.com/abiyu/CrimeAnalyzerShinyApp3")
                                          
                                  )
                         )
