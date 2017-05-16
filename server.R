@@ -33,7 +33,8 @@ function(input, output, session) {
                 
                 leaflet(fData()) %>%
                         addProviderTiles("CartoDB.Positron") %>%
-                        setView(-95.4, 29.76, zoom = 10)
+                        setView(-95.4, 29.76, zoom = 10)%>%
+                        addMarkers(fData()$lon, fData()$lat)
         })
         
         #set mapCluster variable based on input checkbox #
@@ -48,7 +49,7 @@ function(input, output, session) {
                         clearMarkers() %>%
                         clearControls() %>%
                         clearMarkerClusters %>%
-                        addCircleMarkers(
+                        addCircleMarkers(fData()$lon, fData()$lat,
                                 stroke = FALSE, fillOpacity = 0.5, radius=6, color = ~offenseColor(offense),
                                 clusterOptions = mapClusterResult(),
                                 popup = ~paste("<strong>Offense:</strong>",offense,
